@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="sudoku.css">
+</head>
+<body>
+    <h1>Sudoku</h1>
+    <div>
+        <label for="difficulty-select">Select Difficulty: </label>
+        <select id="difficulty-select">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+            <option value="nightmare">Nightmare</option>
+            <option value="superhard">Super Hard</option>
+            
+        </select>
+        <button onclick="loadPuzzle()">New Puzzle</button>
+        <button onclick="autoSolve()">Solve</button>
+        
+        <!-- <button onclick="checkSolution()">Check Solution</button> -->
+        <button onclick="clearGrid()">Clear</button>
+    </div>
+    <div>
+        <label for="allowed-incorrect">Allowed Incorrect Entries: </label>
+        <!-- <input type="number" id="allowed-incorrect" value="3" min="1"> -->
+        <input type="number" id="allowed-incorrect-input" placeholder="Allowed incorrect entries" />
+
+    </div>
+    <!-- <table id="sudoku-grid" ></table> -->
+    <table id="sudoku-grid" class="nine-by-nine"></table>
+
+    <div id="message" class="message"></div>
+    <script src="sudoku.js"></script>
+</body>
+</html>
